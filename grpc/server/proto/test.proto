@@ -1,0 +1,17 @@
+syntax = "proto3";
+package grpc.server.proto;
+option go_package = "proto/";
+
+service Test{
+  rpc Ask(AskReq)returns(AskResp);
+}
+
+message AskReq {
+  string question = 1;
+}
+
+message AskResp {
+  string answer = 1;
+}
+
+message  Empty{}
